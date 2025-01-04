@@ -5,6 +5,7 @@ const emailInput = document.querySelector("#email");
 const fechaInput = document.querySelector("#fecha");
 const sintomasInput = document.querySelector("#sintomas");
 const formularioCita = document.querySelector("#formulario-cita");
+const formularioInput = document.querySelector('#formulario-cita input[type="submit"]');
 const contenedorCitas = document.querySelector("#citas");
 
 let editando = false;
@@ -206,6 +207,7 @@ function submitCita(e) {
 
   formularioCita.reset();
   reiniciarObjCita();
+  formularioInput.value = 'Registrar Paciente'
 }
 
 function reiniciarObjCita() {
@@ -233,4 +235,6 @@ function cargarEdicion(cita) {
   sintomasInput.value = cita.sintomas;
 
   editando = true;
+
+  formularioInput.value = 'Guardar Cambios'
 }
