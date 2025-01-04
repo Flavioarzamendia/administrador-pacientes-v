@@ -208,6 +208,7 @@ function submitCita(e) {
   formularioCita.reset();
   reiniciarObjCita();
   formularioInput.value = 'Registrar Paciente'
+  editando = false
 }
 
 function reiniciarObjCita() {
